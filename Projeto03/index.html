@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crie seu evento</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Crie e compartilhe seu evento.</h1>
+        <p>O primeiro passo, é preencher esse formulário de inscrição.</p>
+      </header>
+      <form id="my-form">
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <!--fieldset é um agrupamento de campos  (foi criado uma classe para agrupar todas as outras para botar espaçamentos iguais nelas e também tem um erro quando tem o Legend logo em baixo do fieldset)-->
+            <legend>Informações do Evento</legend>
+
+            <div class="input-wrapper">
+              <!-- Wrapper significa incubrir alguma coisa ( é apenas o nome da classe)-->
+              <label for="even-title">Título do evento <span>(mínimo 8 caracteres)</span></label>
+              <input 
+                type="text" 
+                id="even-title"
+                required
+                minlength="8" />
+              
+            </div>
+
+            <div class="input-wrapper">
+              <label for="even-link">Link do evento <span>(comece com https://)</span></label> 
+              <input 
+                type="url" 
+                id="even-link"
+                required
+                />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="even-whatsapp">Whatsapp para contato<span>(somente números)</span></label> 
+              <input type="number" id="even-whatsapp" />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="even-info">Informações  extras</label> 
+              <textarea id="even-info" ></textarea>
+            </div>
+            <div class="input-wrapper">
+              <label for="even-category">Categoria</label> 
+              <select id="even-category">
+                <option value="live">Ao vivo</option>
+                <option value="podcast">Podcast</option>
+                <option value="mentorship">Mentoria</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="fieldset-wrapper">
+            
+            <legend>Privacidade</legend>
+
+            <div class="input-wrapper">
+              <label for="even-email">E-mail do administrador <span>(digite um email válido)</span></label> 
+              <input 
+                type="email" 
+                id="even-email" 
+                required
+                />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="even-passworld">Senha de acesso para os participantes<span>(mínimo 8 caracteres)</span></label> 
+              <input
+                 type="password" 
+                 id="even-passworld"
+                 required
+                  minlength="8" />
+            </div>
+
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="even-private" />
+              <label for="even-private">Evento privado</label> 
+            </div>
+
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="fieldset-wrapper">
+            
+            <legend>Dia e hora</legend>
+
+            <div class="col-3">
+              <div class="input-wrapper">
+                <label for="even-date">Data</label> 
+                <input 
+                  type="date" 
+                  id="even-date" 
+                  required
+                  />
+              </div>
+  
+              <div class="input-wrapper">
+                <label for="even-begin">Das</label> 
+                <input type="time" id="even-begin" required/>
+              </div>
+              
+              <div class="input-wrapper">
+                <label for="even-end">Até</label> 
+                <input type="time" id="even-end" required/>
+              </div>
+
+            </div>
+
+            
+
+          </div>
+        </fieldset>
+
+        
+        
+      </form>
+      
+      <footer>
+        <button 
+        class="button"
+        type="submit"
+        form="my-form">
+        Salvar evento
+      
+        </button>
+        </footer>
+      
+    </div>
+  </body>
+</html>
